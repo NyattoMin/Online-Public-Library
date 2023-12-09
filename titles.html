@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>minh Project</title>
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good on
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/minh-header.css">
+    <link rel="stylesheet" href="styles/titles.css">
+  </head>
+  <body>
+    <div class="minh-header">
+      <div class="minh-header-left-section">
+        <a href="index.html" class="header-link">
+          Minh
+        </a>
+      </div>
+
+      <div class="minh-header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png">
+        </button>
+      </div>
+
+      <div class="minh-header-right-section">
+        <a class="user-link header-link" href="user.html">
+          <img class="user-icon" src="images/icons/user-icon.png">
+        </a>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="books-grid js-books-grid">
+      </div>
+    </div>
+
+    <script type="module" src="scripts/titles.js"></script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+.main {
+    margin-top: 60px;
+}
+
+.books-grid {
+	display: grid;
+
+	/* - In CSS Grid, 1fr means a column will take up the
+				remaining space in the grid.
+			- If we write 1fr 1fr ... 1fr; 8 times, this will
+				divide the grid into 8 columns, each taking up an
+				equal amount of the space.
+			- repeat(8, 1fr); is a shortcut for repeating "1fr"
+				8 times (instead of typing out "1fr" 8 times).
+				repeat(...) is a special property that works with
+				display: grid; */
+	grid-template-columns: repeat(8, 1fr);
+}
+
+/* @media is used to create responsive design (making the
+		website look good on any screen size). This @media
+		means when the screen width is 2000px or less, we
+		will divide the grid into 7 columns instead of 8. */
+@media (max-width: 2000px) {
+	.books-grid {
+		grid-template-columns: repeat(7, 1fr);
+	}
+}
+
+/* This @media means when the screen width is 1600px or
+		less, we will divide the grid into 6 columns. */
+@media (max-width: 1600px) {
+	.books-grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+@media (max-width: 1300px) {
+	.books-grid {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media (max-width: 1000px) {
+	.books-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 800px) {
+	.books-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 575px) {
+	.books-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 450px) {
+	.books-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.book-container {
+	padding-top: 40px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+
+	border-right: 1px solid rgb(231, 231, 231);
+	border-bottom: 1px solid rgb(231, 231, 231);
+
+	display: flex;
+	flex-direction: column;
+}
+
+.book-image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 180px;
+	margin-bottom: 20px;
+}
+
+.book-image {
+	/* Images will overflow their container by default. To
+		prevent this, we set max-width and max-height to 100%
+		so they stay inside their container. */
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.book-name {
+	height: 40px;
+	margin-bottom: 5px;
+}
+
+.book-rating-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.book-rating-stars {
+	width: 100px;
+	margin-right: 6px;
+}
+
+.book-rating-count {
+	color: rgb(1, 124, 182);
+	cursor: pointer;
+	margin-top: 3px;
+}
+
+.book-price {
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.book-quantity-container {
+	margin-bottom: 17px;
+}
+
+.book-spacer {
+	flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+	.container{
+			font-size: 14px;
+	}
+	.poster{
+			margin: auto;
+			width: auto;
+			max-height: 10.8em;
+	}
+}
+
+.info{
+		grid-template-columns: 1fr;
+}
+
+.rating{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6em;
+	margin: 0.6em 0 0.9em 0;
+}
+
+.rating img{
+	width: 1.2em;
+}
+
+.rating h4{
+	display: inline-block;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+.poster{
+	width: 100%;
+}
+
+.info{
+	position: relative;
+	display: grid;
+	grid-template-columns: 4fr 8fr;
+	margin-top: 1.2em;
+}
+/*
+-webkit-text-size-adjust: 100%;
+font-feature-settings: normal;
+font-variation-settings: normal;
+tab-size: 4;
+-webkit-tap-highlight-color: transparent;
+--top-margin: .5rem;
+--side-margin: 1rem;
+--bottom-margin: 2rem;
+--navbar-height: 3.5rem;
+--bottom-nav-height: 0px;
+--bottom-nav-padding: env(safe-area-inset-bottom,16px);
+--bottom-nav-area: calc(var(--bottom-nav-padding) + var(--bottom-nav-height));
+--banner-height: 13.5rem;
+--drawer-menu-width: 256px;
+--drawer-menu-min-width: 256px;
+--drawer-profile-width: 320px;
+--drawer-profile-min-width: 256px;
+--drawer-reader-width: 312px;
+--drawer-reader-min-width: 256px;
+font-family: Poppins,sans-serif;
+--swiper-theme-color: #007aff;
+--swiper-navigation-size: 44px;
+--md-primary: #ffc300;
+--md-primary-10: #e6613e;
+--md-primary-20: #bc553b;
+--md-status-red: #ffd60a;
+--md-status-green: #04d000;
+--md-status-yellow: #da7500;
+--md-status-blue: #00c9f5;
+--md-status-grey: #c4c4c4;
+--md-status-purple: #7d40ff;
+--md-indication-blue: #4b98f1;
+--md-danger: #ffd60a;
+--md-danger-10: #db3131;
+--md-danger-20: #bf2121;
+color-scheme: dark;
+line-height: inherit;
+--banner-overlap: calc(var(--navbar-height) + var(--top-margin));
+--banner-top: calc(var(--banner-overlap)*-1);
+--banner-filter: blur(4px);
+--banner-overlay-gradient: linear-gradient(67.81deg,rgba(0,0,0,.64) 35.51%,transparent);
+color: inherit;
+user-select: none;
+border: 0 solid #e5e7eb;
+box-sizing: border-box;
+--tw-border-spacing-x: 0;
+--tw-border-spacing-y: 0;
+--tw-translate-x: 0;
+--tw-translate-y: 0;
+--tw-rotate: 0;
+--tw-skew-x: 0;
+--tw-skew-y: 0;
+--tw-scale-x: 1;
+--tw-scale-y: 1;
+--tw-pan-x: ;
+--tw-pan-y: ;
+--tw-pinch-zoom: ;
+--tw-scroll-snap-strictness: proximity;
+--tw-gradient-from-position: ;
+--tw-gradient-via-position: ;
+--tw-gradient-to-position: ;
+--tw-ordinal: ;
+--tw-slashed-zero: ;
+--tw-numeric-figure: ;
+--tw-numeric-spacing: ;
+--tw-numeric-fraction: ;
+--tw-ring-inset: ;
+--tw-ring-offset-width: 0px;
+--tw-ring-offset-color: #fff;
+--tw-ring-color: rgba(59,130,246,.5);
+--tw-ring-offset-shadow: 0 0 #0000;
+--tw-ring-shadow: 0 0 #0000;
+--tw-blur: ;
+--tw-brightness: ;
+--tw-contrast: ;
+--tw-grayscale: ;
+--tw-hue-rotate: ;
+--tw-invert: ;
+--tw-saturate: ;
+--tw-sepia: ;
+--tw-drop-shadow: ;
+--tw-backdrop-blur: ;
+--tw-backdrop-brightness: ;
+--tw-backdrop-contrast: ;
+--tw-backdrop-grayscale: ;
+--tw-backdrop-hue-rotate: ;
+--tw-backdrop-invert: ;
+--tw-backdrop-opacity: ;
+--tw-backdrop-saturate: ;
+--tw-backdrop-sepia: ;
+display: block;
+max-width: 100%;
+height: auto;
+width: 100%;
+border-radius: .25rem;
+--tw-shadow: 0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+object-fit: cover;
+object-position: center center;
